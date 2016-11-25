@@ -16,7 +16,9 @@ This completed the test patch for this function on the oscillator. However for t
 The next operation of the Buchla 200 series to translate from the Pure-Data abstraction is the tone modifiers in this case linear and cross-modulated FM circuits. 
 
 ![buchla258](https://github.com/s1thlord/S-series/blob/master/Screen%20Shot%202016-11-17%20at%2015.42.35.png)
+
 Fig 2 wave-shaper abstraction. 
+
 The linear FM (frequency modulation) abstraction was started by attempting to copy the way this function is achieved in Pure-Data however this attempt failed because the parameters on the Axoloti maths objects, has a feature on this older version of the software which limited the manipulation of the modulation signal. After rethinking the possible connections within the Axoloti software. The FM patch was redesigned for this new software platform and worked successfully in a fashion. This new design (shown in Fig3) uses a VCA to control the modulation however this just effects modulation depth unlike the Pure-Data version which allows for massive manipulation of the modulation index. In this version the way to achieve maximum modulation effects is by affecting the carrier, modulation ratio although at this time the software is being kept at a 1:1 ratio with increments in frequency of the modulation and carrier signals. 
 
 
