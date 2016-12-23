@@ -1,8 +1,4 @@
-# S-series
-Axoloti Hardware dual oscillator, function generator and ADSR
-By Chris Holder Any comments or quiries please E:mail the author Chris.holder@mail.com
-
-##Dual oscillator s-series 
+##Dual Oscillator S1-series 
 
 By Chris Holder Any comments or quiries please E:mail the author Chris.holder@mail.com
 
@@ -13,7 +9,7 @@ The main reasoning behind this project is too continue the work previously carri
  
 
 
-
+![buchla258](https://github.com/s1thlord/S-series/blob/master/Screen%20Shot%202016-12-23%20at%2014.21.56.png)
 
 Fig 1 Shows an Axoloti Core Circuit Board.
 
@@ -26,18 +22,6 @@ Project Start Product specifications
 •	Frequency modulation Linear and cross modulated
 •	1 volt per octave compatible
 •	Control Voltage inputs
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -67,7 +51,7 @@ Fig 3 Axoloti abstraction showing FM modulation.
 Once the linear FM abstraction was achieved it only took two more objects added to this abstraction to achieve the cross-modulated version of the patch  (shown in fig 4).
 Similar to the wave-shaper abstraction the linear and cross-modulated FM patches need antialiasing, CV input and an external audio input to be considered before its final connections to the proposed hardware unit.
 
-![buchla258]
+![buchla258](https://github.com/s1thlord/S-series/blob/master/cross%20mod%20fm%20t%2014.27.34.png)
 
 
 Fig 4 Abstraction showing cross modulated FM.
@@ -286,14 +270,4 @@ p, Scherz. Practical Electronics for Inventors p 315 2007
 
 ##Links
 
-
-
-
-
-
-
-
-
- 
-             
 
