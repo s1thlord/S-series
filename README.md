@@ -269,5 +269,5 @@ M. Dalgelish Lecture notes University of Wolverhampton 2016.
 p, Scherz. Practical Electronics for Inventors p 315 2007
 
 ##Links
-
+https://github.com/s1thlord/ADSR-ASR-Function-Generator-S-series
 
