@@ -1,10 +1,10 @@
 ##Dual Oscillator S1-series 
 
-By Chris Holder Any comments or quiries please E:mail the author Chris.holder@mail.com
+By Chris Holder Any comments or quiries please E:mail the author <Chris.holder@mail.com>
 
 ##Introduction
 
-The main reasoning behind this project is too continue the work previously carried out in Pure-Data. The previous project physically modelled 3 units from the Buchla 200 series modular synth (this work is available at https://github.com/s1thlord/7MU009-Idon) However for this project the hardware models are making no attempt at authenticity towards directly copying the Buchla model as these models came from the 1970’s changes to bring the modules up to date will be introduced. The main aim of the project therefore is to produce a hardware series based on the Buchla 200 series not to be the 200 series itself. At the core of all the hardware will be an Axoloti Core circuit board. This circuit board will be used (shown in fig 1) to achieve all of the parameters needed to produce the hardware. It is hoped that the final products will be of low cost but have a high quality tonally speaking. It is also hoped that the product will make this type of synthesis more available to more merge budgets. To achieve this aim the Pure-Data abstraction will have to be translated, recoded in the Axoloti’s own graphic software. A hardware interface will also need to be designed, not only the available controls needed by the module but also any graphic’s or text that will be needed by a user to identify the mechanism’s to hand.    
+The main reasoning behind this project is too continue the work previously carried out in Pure-Data. The previous project physically modelled 3 units from the Buchla 200 series modular synth (this work is available at <https://github.com/s1thlord/7MU009-Idon>) However for this project the hardware models are making no attempt at authenticity towards directly copying the Buchla model as these models came from the 1970’s changes to bring the modules up to date will be introduced. The main aim of the project therefore is to produce a hardware series based on the Buchla 200 series not to be the 200 series itself. At the core of all the hardware will be an Axoloti Core circuit board. This circuit board will be used (shown in fig 1) to achieve all of the parameters needed to produce the hardware. It is hoped that the final products will be of low cost but have a high quality tonally speaking. It is also hoped that the product will make this type of synthesis more available to more merge budgets. To achieve this aim the Pure-Data abstraction will have to be translated, recoded in the Axoloti’s own graphic software. A hardware interface will also need to be designed, not only the available controls needed by the module but also any graphic’s or text that will be needed by a user to identify the mechanism’s to hand.    
 
  
 
@@ -104,7 +104,7 @@ Fig 9 Recoded phase modulation in axoloti patch software.
 
 
 
-Interface concept.
+##Interface concept.
 
 Looking into the design behind the user interface various similar devices where studied in regards their controller layout (some studied are shown in Fig 10). 
 
@@ -115,8 +115,13 @@ Looking into the design behind the user interface various similar devices where 
 
 
 
-![buchla258]
+![buchla258](https://github.com/s1thlord/S-series/blob/master/product%20osc%204at%2013.55.31.png)
 
+![buchla258](https://github.com/s1thlord/S-series/blob/master/product%20osc%2013.48.45.png)
+
+![buchla258](https://github.com/s1thlord/S-series/blob/master/prodcut%20osc%202t%2013.59.27.png)
+
+![buchla258](https://github.com/s1thlord/S-series/blob/master/roland%20540%20osc%2013.41.32.png)
 
 Fig 10 Some Dual oscillator modules available on the market at this time 2016.
 
@@ -125,7 +130,7 @@ After considering the designs in Fig 10 it has been noted that most manufacturer
 However at this point two possible layouts for the unit are under consideration for the interface (that is without any consideration to the hardware implications that a layout may cause). The First of these designs (shown in Fig 11) will incorporate all of the controls for a single oscillator switchable between both units controlling each oscillator at the flip of a switch.
 
  
-![buchla258]
+![buchla258](https://github.com/s1thlord/S-series/blob/master/IMG_20170109_120544.jpg)
 
 
 Fig 11 switchable control interface  
@@ -135,7 +140,7 @@ The second of these designs (shown in Fig 12) will see all parameters individual
 
 
 
-![buchla258]
+![buchla258](https://github.com/s1thlord/S-series/blob/master/IMG_20170109_120558.jpg)
 
 Fig 12 Full parameter interface design  
 
@@ -173,13 +178,13 @@ To begin the first hardware test connections it has been considered to connect t
 
 
 
-![buchla258]
+![buchla258](https://github.com/s1thlord/S-series/blob/master/2af0b88c77049eb54445f4d9d7c7910561c12247.jpg)
 
 
 Fig 13Axoloti pin out diagram 
 
 
-![buchla258]
+![buchla258](https://github.com/s1thlord/S-series/blob/master/Screen%20Shot%202016-11-24%20at%2022.43.49.png)
 
 
 Fig 14 Axoloti test abstraction for input devices.
@@ -187,7 +192,7 @@ Fig 14 Axoloti test abstraction for input devices.
 
 Upon making the connections to both the breadboard and the core circuit board, the Axoloti was ‘fired’ up and the input devices toggled. The switch now attached to input PC1 took a minor adjustment with the software object to place it in the correct mode of operandi after this was done the switch worked as anticipated. However this first test then had a minor problem, as the 10k pot was broken. After replacing the failed part the input was toggled in value with the expected input result within the software of 0-64 with the values inverted due to the nature of the input device a pot in this case. To ensure that the correct values needed by the tone generator within the software where adhered to the test abstraction was updated with the new objects needed to run the software in the final version (this abstraction is shown in Fig 15). 
 
-![buchla258]
+![buchla258](https://github.com/s1thlord/S-series/blob/master/Screen%20Shot%202016-11-22%20at%2015.18.11.png)
 
 
 Fig 15 Test abstraction for controlling input voltages.
@@ -218,13 +223,13 @@ Due to the decision to house both oscillators on the same Axoloti board as discu
 In the first instance two different solutions to the problem now at hand which is how to get the input value from the controller on I/O 0-7 to the output pin while transmitting or receiving the 3-bit identifier code. The first of these solutions under consideration was in the software domain. This solution was to have a select button trigger the code to the IC from the Axoloti of the controller being used but from the start it was thought to be a last option, as this would add many switches to the interface of the unit also the control mechanism itself was not desired. The other solution under debate was a hardware option where it was considered to have each controller identify it, and send the output and the 3-bit identifier code to the Axoloti input pins. After some research the circuit diagram (shown in Fig 18) was created. However this circuit was doomed to failure from the start for two reasons. Firstly the 74148 encoder IC needed to produce the 3-bit code for the multiplexer and software interaction is now discontinued and finding a replacement IC was proving difficult. The second and more fundamental reason why this circuit would not really work as intended is due to once a controller has been triggered or switched the resulting action within the circuit would indeed switch the multiplexer to the required number for the controller but this would be a “fire and forget” system as there is no way of turning the controller into an off position when the next controller is desired. 
 
 
-![buchla258]
+![buchla258](https://github.com/s1thlord/S-series/blob/master/IMG_20170109_120723%20copy.jpg)
 
 Fig 18 Concept of circuit diagram for switching multiplexer.
 
 After some consultation with the data sheet that accompanies the 4051B IC the section on typical applications provided the answer to this particular problem. Although the circuit (shown in Fig 19) is the alternative way going from 1 to 8 the same theory would work in reverse, as these IC’s are bi-directional.
 
-![buchla258]
+![buchla258](https://github.com/s1thlord/S-series/blob/master/multiplexer%20ti%20circuitt%2015.57.37.png)
 
 Fig 19 Circuit Diagram taken from 4051 Data sheet by Texas instruments.
 
@@ -239,7 +244,10 @@ This solution sees the Axoloti sending the 3-bit code to continually switch inpu
 Fig 20 Photograph of 4051B test circuit diagram 
 
 
-![buchla258]
+![buchla258](https://github.com/s1thlord/S-series/blob/master/mutiplexer%20script%2013.29.42.png)
+
+![buchla258](https://github.com/s1thlord/S-series/blob/master/script%20in%20object%20window%2013.29.56.png)
+
 
 
 Fig 21 The Software abstraction controlling the 4051B multiplexer IC.
@@ -251,13 +259,13 @@ Fig 21 The Software abstraction controlling the 4051B multiplexer IC.
 
 
 
-##Evaluation 
+##Evaluation of S1 series oscillator
 
 
-The Platform
 
 
-The S1 module
+
+
 
 
 
@@ -269,5 +277,5 @@ M. Dalgelish Lecture notes University of Wolverhampton 2016.
 p, Scherz. Practical Electronics for Inventors p 315 2007
 
 ##Links
-https://github.com/s1thlord/ADSR-ASR-Function-Generator-S-series
 
+<https://github.com/s1thlord/ADSR-ASR-Function-Generator-S-series>
