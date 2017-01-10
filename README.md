@@ -15,7 +15,7 @@ Fig 1 Shows an Axoloti Core Circuit Board.
 
 
 
-Project Start Product specifications 
+#Project Start Product specifications 
 
 •	Dual oscillator 
 •	Wave shaping from sine to saw and sine to square wave  
@@ -147,7 +147,28 @@ Fig 12 Full parameter interface design
 
 
 However at this point in time the full parameter design (shown above in fig 12) has the most favourability being more inline with the majority of manufacturers.  
-It is also hoped that the left to right approach to the control layout will be a more intuitive method of control when considering the series as a whole. 
+It is also hoped that the left to right approach to the control layout will be a more intuitive method of control when considering the series as a whole.
+Another consideration of the interface design is dealing with the issue of patch leads crossing over the controllers, which can be a problem area with modular synthesis (an example of this problem is shown in Fig 12a).
+
+
+![buchla258](https://github.com/s1thlord/S-series/blob/master/Screen%20Shot%202017-01-10%20at%2013.14.38.png)
+
+Fig 12a picture of patched modular synthesiser in operation noting the many patch leads upon the unit.
+To help design an interface taking this issue into account, the design was redrawn to the correct scale and taking inspiration from manufactures such as Doepfer (shown in Fig 12 b) by placing all of the inputs and outputs on one side of the unit while keeping the controller mechanism on the adjacent side. 
+It is also hoped that the unit will be euro-rack compatible, as these rack mount systems seem popular within the modular field (Fig 12 c shows scaled interface design) 
+
+![buchla258](https://github.com/s1thlord/S-series/blob/master/Screen%20Shot%202017-01-10%20at%2012.19.26.png)
+
+Fig 12b interface design showing attempt to scale down patching problems.   
+
+ Other considerations for the interface also include coloured jack sockets so a user can visually tell the difference between the different voltage inputs and outputs.
+
+![buchla258] (https://github.com/s1thlord/S-series/blob/master/IMG_20170109_120628%20copy.jpg)
+Fig 12c picture of full unit size interface design.
+
+
+From the design shown in Fig 12c a drill hole mapper was made for each module to show the physical layout of the design. This design altered slightly after the physical size of the components had been checked against the design.  
+
  
 
 
@@ -201,7 +222,7 @@ Fig 15 Test abstraction for controlling input voltages.
 The next hardware test to be carried out was an emulation of the CV and 1-volt per octave inputs. Due to the nature of these inputs in respect to their operation voltages in most modular systems the 1-volt per octave outputs range from 0 – 10 volts similarly with the CV output which ranges from 0-5 volts. However this does present a problem, as the Axoloti core board will only accept a maximum of 3.3 volts before damage to the circuit board occurs. This hardware restriction means the considered input voltages will need to be attenuated in order to work. The means by which to attenuate these inputs however needed to be discovered. After a small amount of research It is hoped that the correct configuration made up of resistors connected in series will not only reduce the voltage to an acceptable level to effectively communicate with the Axoloti circuit board but also maintain the scaling within the voltage as this is a desired function for the 1-volt per octave input due to its relationship with pitch control. Scherz States, “When a circuit has a number of resistors connected in series, the total resistance of the circuit is the sum of the individual resistances. Also, the amount of current flowing thought each resistor in series is the same, while the voltage across each resistor varies with resistance” (p, Scherz. Practical Electronics for Inventors p 315 2007). The circuit diagram for this connection is shown below in Fig**
 
 
-![buchla258]
+![buchla258](https://github.com/s1thlord/S-series/blob/master/Screen%20Shot%202017-01-10%20at%2012.49.35.png)
 
 
 
@@ -211,7 +232,7 @@ In order to find the correct resistor values this project would require attenuat
 
 
 
-![buchla258]
+![buchla258](https://github.com/s1thlord/S-series/blob/master/IMG_20161208_153645.jpg)
 
 
 Fig 17 Photograph of potentiometer dividing voltage.
@@ -238,7 +259,7 @@ This solution sees the Axoloti sending the 3-bit code to continually switch inpu
 
  
 
-![buchla258]
+![buchla258](https://github.com/s1thlord/S-series/blob/master/IMG_20161214_170206.jpg)
 
 
 Fig 20 Photograph of 4051B test circuit diagram 
@@ -251,15 +272,42 @@ Fig 20 Photograph of 4051B test circuit diagram
 
 
 Fig 21 The Software abstraction controlling the 4051B multiplexer IC.
+However by a serendipity moment while browsing the Axoloti community webpage I came across the script object shown in Fig 21. This script written by the Author of the patcher program Johannes Taelman in 2016 was hacked to give the functions needed for this project .One nice point of this XML script is the clock speed which is running at 4k hertz more than 5 times quicker than the previous attempt done with an LFO K signal trigger.  
 
+![buchla258](https://github.com/s1thlord/S-series/blob/master/mutiplexer%20script%2013.29.42.png)
+Fig 21 screenshot to show Hacked version of multiplexing XML script.
+
+
+The following photographs (Fig 21a) will give a pictorial blog of the rest of the hardware construction.
+
+![buchla258](
+
+Fig 21a shows pictures from blank matrix board to full circuit board inclusion.
+ 
+
+##Developing the conjecture 
+
+With the proposed functions discussed in the conjecture of development chapter added successfully to the unit functionality. One last development was debated in the form of the trim function over the frequency control to allow a fine-tuning of the oscillators audio output. This trim function is intended for use in conjunction with the Corse tuning of the main frequency control potentiometer. This function was added in the first instance on the original Pure-Data software version more for reasons of authenticity instead of practical intentions or so it was considered at that time. The reasoning behind this was the trim function was only considered useful in the early days of synthesisers when hardware oscillators would drift in frequency when the unit had warmed. However upon further consideration it has been decided to add this function, as there are still practical uses for this type of control. 
 
 
 
 ##Final product specifications
+•	Dual oscillator
+•	Sine wave to saw wave and sine to square wave 
+•	Wave-shaping between VCO outputs
+•	FM (phase modulation) with Linear and exponential response 
+•	5 volt CV input over wave-shaping, FM Linear and exponential modes
+•	External audio input to FM modulation modes
+•	1 volt per octave and MIDI compatible
+•	3U compatible size at HP 30  
 
 
 
 ##Evaluation of S1 series oscillator
+To aid in the evaluation of the S1 series dual oscillator, two slightly different approaches have been taken. The first approach is juxtaposition against the software counterpart that was realised in Pure-Data. The second approach is a comparison to hardware equivalent in this case Buchla 258 clones of which there are many on UTube. 
+In comparison with the Idon software the S1 series oscillator shares all of the modus operandi of the software from frequency control to CV input. The comparison to hardware versions from the point of control mechanisms is an exact match of capability. However the two versions do sound slightly tonally different, putting aside parameters such as different Digital Audio Converters (DAC’S) in both units and other such hardware issues, a sine wave is still a sine wave. Both units have a pleasant tone when compared with straight wave-shape output. The Idon software is capable of reaching frequencies just above and below those achievable by the S-series. This small restriction in frequency response does not have much impact on the overall tonal capabilities of the S-series. This is also the case from a hardware comparison prospective. 
+Staying with a comparison of the S-series tonal capabilities as this is the fundamental reason for the unit’s existence. The FM modes of signal modulation when compared to the Idon software differ vastly. The reason for this as discussed in depth in the software concept chapter the S-Series uses phase modulation instead of true FM like that used on the hardware clones and also the software counterpart. Although phase modulation is more tonal hence it’s use by the large keyboard manufactures in the 1980’s claiming FM as a new “sound” it is not as capable on a modulation perspective. This is also an issue for the 258 clones now made, as the vactrol chips used by Buchla back in the 1970’s is no longer available and has a large impact upon the FM modulation tones. One advantage the hardware clones and the S-series have over the Idon software is the ability to take an external audio source into the FM/Phase circuitry.
+Despite this difference in modulation technique the final outcome of the S-series oscillator is a low cost modular tone generator that is just as capable as the other hardware equivalents. The S-series also has more external hardware compatibility than most 258-clone variants due to the inclusion of midi as well as 1 volt per octave input. 
 
 
 
