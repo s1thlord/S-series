@@ -121,7 +121,7 @@ Looking into the design behind the user interface various similar devices where 
 
 ![buchla258](https://github.com/s1thlord/S-series/blob/master/prodcut%20osc%202t%2013.59.27.png)
 
-![buchla258](https://github.com/s1thlord/S-series/blob/master/roland%20540%20osc%2013.41.32.png)
+![buchla258](https://github.com/s1thlord/S-series/blob/master/Screen%20Shot%202017-01-10%20at%2012.05.34.png)
 
 Fig 10 Some Dual oscillator modules available on the market at this time 2016.
 
