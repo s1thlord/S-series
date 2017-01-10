@@ -265,7 +265,7 @@ This solution sees the Axoloti sending the 3-bit code to continually switch inpu
 Fig 20 Photograph of 4051B test circuit diagram 
 
 
-![buchla258](https://github.com/s1thlord/S-series/blob/master/mutiplexer%20script%2013.29.42.png)
+![buchla258](https://github.com/s1thlord/S-series/blob/master/Screen%20Shot%202017-01-10%20at%2013.48.43.png)
 
 ![buchla258](https://github.com/s1thlord/S-series/blob/master/script%20in%20object%20window%2013.29.56.png)
 
