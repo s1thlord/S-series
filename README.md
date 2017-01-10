@@ -282,7 +282,13 @@ Fig 21 screenshot to show Hacked version of multiplexing XML script.
 
 The following photographs (Fig 21a) will give a pictorial blog of the rest of the hardware construction.
 
-![buchla258](
+![buchla258](https://github.com/s1thlord/S-series/blob/master/IMG_20161225_105855.jpg)
+![buchla258](https://github.com/s1thlord/S-series/blob/master/IMG_20161225_113742.jpg)
+![buchla258](https://github.com/s1thlord/S-series/blob/master/IMG_20161225_132954.jpg)
+![buchla258](https://github.com/s1thlord/S-series/blob/master/IMG_20161225_200304.jpg)
+![buchla258](https://github.com/s1thlord/S-series/blob/master/IMG_20161225_224009.jpg)
+![buchla258](https://github.com/s1thlord/S-series/blob/master/IMG_20161227_133046.jpg)
+![buchla258](https://github.com/s1thlord/S-series/blob/master/IMG_20161229_000355.jpg)
 
 Fig 21a shows pictures from blank matrix board to full circuit board inclusion.
  
