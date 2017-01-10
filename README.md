@@ -254,7 +254,7 @@ After some consultation with the data sheet that accompanies the 4051B IC the se
 
 Fig 19 Circuit Diagram taken from 4051 Data sheet by Texas instruments.
 
-This solution sees the Axoloti sending the 3-bit code to continually switch inputs on the 4051B IC to allow input from I/O’s 0-7. This Circuit has been trialled on a breadboard (shown in Fig 20). However one concern at the moment which came to light from the IC test the only clock generator available in the Axoloti software that will output a binary pulse (shown in Fig 21) is only capable of a signal speed of 400Hz which may cause issues if potentiometers are attached to the Multiplexer whereby the “pot” could be operated but the movement will seem sluggish and have gaps in the linear action of the input.
+This solution sees the Axoloti sending the 3-bit code to continually switch inputs on the 4051B IC to allow input from I/O’s 0-7. This Circuit has been trialled on a breadboard (shown in Fig 20). However one concern at the moment which came to light from the IC test the only clock generator available in the Axoloti software that will output a binary pulse (shown in Fig 20a) is only capable of a signal speed of 400Hz which may cause issues if potentiometers are attached to the Multiplexer whereby the “pot” could be operated but the movement will seem sluggish and have gaps in the linear action of the input.
    
 
  
@@ -266,6 +266,8 @@ Fig 20 Photograph of 4051B test circuit diagram
 
 
 ![buchla258](https://github.com/s1thlord/S-series/blob/master/Screen%20Shot%202017-01-10%20at%2013.48.43.png)
+Fig 20a a screenshot of LFO multiplexer absraction.
+
 
 ![buchla258](https://github.com/s1thlord/S-series/blob/master/script%20in%20object%20window%2013.29.56.png)
 
