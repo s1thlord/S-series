@@ -169,6 +169,10 @@ Fig 12c picture of full unit size interface design.
 
 From the design shown in Fig 12c a drill hole mapper was made for each module to show the physical layout of the design. This design altered slightly after the physical size of the components had been checked against the design.  
 
+ The following pictures show the interface construction
+ 
+ ![](https://github.com/s1thlord/S-series/blob/master/IMG_20170111_213214.jpg)
+ ![](https://github.com/s1thlord/S-series/blob/master/IMG_20170112_151831.jpg)
  
 
 
