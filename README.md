@@ -293,6 +293,8 @@ The following photographs (Fig 21a) will give a pictorial blog of the rest of th
 ![buchla258](https://github.com/s1thlord/S-series/blob/master/IMG_20161225_224009.jpg)
 ![buchla258](https://github.com/s1thlord/S-series/blob/master/IMG_20161227_133046.jpg)
 ![buchla258](https://github.com/s1thlord/S-series/blob/master/IMG_20161229_000355.jpg)
+![](https://github.com/s1thlord/S-series/blob/master/IMG_20170114_113510.jpg)
+![](https://github.com/s1thlord/S-series/blob/master/IMG_20170115_152938.jpg)
 
 Fig 21a shows pictures from blank matrix board to full circuit board inclusion.
  
